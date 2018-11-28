@@ -1,3 +1,11 @@
+"""convert an odas result dict from a 4-channel pseye configuration to
+a ros msg and publish it
+
+oswald berthold, 2018
+
+call it via `./bin/odaslive -c config/odaslive/pseye-turtlebot.cfg | python demo/tools/odas2ros.py`
+"""
+
 import sys, json, time
 
 # data = json.load(sys.stdin)
@@ -43,5 +51,3 @@ for line in sys.stdin:
         json_buf += line
     # print line
     seqno += 1
-
-
